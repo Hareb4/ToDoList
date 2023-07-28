@@ -30,8 +30,7 @@
   </main>
 </body>
 <script>
-
-
+  
   const date = new Date()
   const todaysDate = date.toLocaleDateString('no-no')
   var tasks = []
@@ -85,8 +84,7 @@
     } else {
       tasks[index].isDone = true
     }
-    let tasksString = JSON.stringify(tasks)
-    localStorage.setItem("tasks", tasksString)
+    storeTask()
     show()
   }
 
@@ -123,6 +121,10 @@
     index++
   }
 
+  function storeTask(){
+    let tasksString = JSON.stringify(tasks)
+    localStorage.setItem("tasks", tasksString)
+  }
 </script>
 
 </html>
