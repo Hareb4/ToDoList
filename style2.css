@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+.back{
+    height: 100vh;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* Main Box */
+.box{
+    background-color: #3f3f3f;
+    min-width: 390px;
+    padding: 7px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.headbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+/* Buttons */
+.btn2{
+    border: 0;
+    background-color: aliceblue;
+    color: #1b1b1b;
+    padding: 4px 8px;
+    border-radius: 16px;
+    cursor: pointer;
+    line-height: 0;
+}
+.btn2:hover{
+    background-color: orange;
+}
+
+.submit{
+    padding: 4px 8px;
+    border: 0;
+    border-radius: 12px;
+}
+/* Add New Task */
+.add{
+    display: none;
+}
+
+/* Tasks , Task */
+.tasks{
+    max-height: 300px ;
+    margin: 5px auto;
+    overflow: scroll;
+    scroll-snap-type: proximity;
+}
+.task{
+    position: sticky;
+    top: 0;
+    background-color: #1b1b1b;
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 1px;
+}
+
+.done{
+    background-color: green !important;
+}
+
+.tools{
+    display: flex;
+}
+.tools *{
+    margin: 0 6px;
+}
