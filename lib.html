@@ -85,7 +85,7 @@
   }
 
   function show() {
-    $(".tasks").empty()
+    $(".tasks").html("")
     let ha = localStorage.getItem("tasks")
     let bre = JSON.parse(ha)
     let index = 0
