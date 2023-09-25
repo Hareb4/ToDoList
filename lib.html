@@ -34,7 +34,6 @@
   const date = new Date()
   const todaysDate = date.toLocaleDateString('no-no')
   var tasks = []
-  var neom = ""
 
 
   $(".plus").click(function () {
@@ -50,8 +49,7 @@
 
   function deleteTask(index) {
     tasks.splice(index, 1)
-    let tasksString = JSON.stringify(tasks)
-    localStorage.setItem("tasks", tasksString)
+    storeTask()
     show()
   }
 
@@ -59,8 +57,7 @@
     var preEdit = tasks[index].taskName
     let foo = prompt('Type here', preEdit);
     tasks[index].taskName = foo
-    let tasksString = JSON.stringify(tasks)
-    localStorage.setItem("tasks", tasksString)
+    storeTask()
     show()
   }
 
@@ -72,8 +69,7 @@
       "isDone": false
     }
     tasks.push(obj)
-    let tasksString = JSON.stringify(tasks)
-    localStorage.setItem("tasks", tasksString)
+    storeTask()
     $(".text").val("")
     show()
   }
@@ -125,6 +121,8 @@
     let tasksString = JSON.stringify(tasks)
     localStorage.setItem("tasks", tasksString)
   }
+
+
 </script>
 
 </html>
